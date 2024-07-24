@@ -2,8 +2,13 @@
 
 use App\Http\Controllers\ProfileController;
 
-Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+// routes/web.php
+Route::get('/children', [ChildController::class, 'index'])->name('children.list');
+Route::post('/children/update', [ChildController::class, 'update'])->name('children.update');
+
 
 
 
