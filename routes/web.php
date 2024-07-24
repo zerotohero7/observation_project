@@ -1,6 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
+
+
+
 
 /*
 |--------------------------------------------------------------------------
